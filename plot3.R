@@ -43,7 +43,7 @@ plot3x <- function(data) {
                   xlab="", type = "l"))
   with(data, points(Time, Sub_metering_2, col = "red", type='l'))
   with(data, points(Time, Sub_metering_3, col = "blue", type='l'))
-  legend("topright", pch = 1, col = c("black", "blue", "red"), cex=0.7,
+  legend("topright", lty = 1, col = c("black", "blue", "red"), cex=0.7,
             legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
   dev.off()
 }

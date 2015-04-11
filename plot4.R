@@ -39,7 +39,7 @@ plot4x <- function(data) {
   #
   png(file = "plot4.png")
   par(mfrow = c(2, 2))
-  with(data, plot(Time, Global_active_power, xlab="", ylab="Global Active Power (kilowatts)",
+  with(data, plot(Time, Global_active_power, xlab="", ylab="Global Active Power",
                   type = "l"))
   with(data, plot(Time, Voltage, xlab="datetime", ylab="Voltage", type = "l"))
   plot3x1(data)
@@ -104,7 +104,7 @@ plot3x1 <- function(data) {
                   xlab="", type = "l"))
   with(data, points(Time, Sub_metering_2, col = "red", type='l'))
   with(data, points(Time, Sub_metering_3, col = "blue", type='l'))
-  legend("topright", pch = 1, col = c("black", "blue", "red"), cex=0.7,
+  legend("topright", lty = 1, col = c("black", "blue", "red"), cex=0.7,
          legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 }
 
